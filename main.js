@@ -201,6 +201,8 @@ window.dataLayer = window.dataLayer || [];
     countdown.innerHTML = output.replace('%h', hours.toString().padStart(2)).replace('%m', minutes.toString().padStart(2)).replace('%s', seconds.toString().padStart(2, '0'));
     largeCountdown.innerHTML = largeOutput.replace('%h', hours.toString().padStart(2)).replace('%m', minutes.toString().padStart(2)).replace('%s', seconds.toString().padStart(2, '0'));
 
+    document.title = countdown.innerHTML + " - PHS Schedule"
+    
     document.getElementsByClassName('period')[0].innerHTML = periodoutput.replace('%d',period)
     document.getElementsByClassName('stype')[0].innerHTML = typeoutput.replace('%a',data[str][0])
 
